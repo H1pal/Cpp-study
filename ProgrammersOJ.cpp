@@ -3,6 +3,6 @@
 
 using namespace std;
 
-static void programmers() {
-
+int main() {
+    return 0;
 }
