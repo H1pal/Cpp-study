@@ -26,7 +26,7 @@ public:
     Iterator end() const { return Iterator(finish); }
 };
 
-static void vector() {
+int main() {
     vector<int> v; // 벡터 기본 선언
     vector<int> v2(5); // 사이즈는 5, 모두 0 값으로 초기화
     vector<int> v3(5, 1); // 사이즈 5, 모두 1로 초기화

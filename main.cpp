@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 typedef long long ll;
 
@@ -10,7 +11,28 @@ ll examine(const ll n1, const ll n2) {
     return n1 > n2 ? gcd(n1, n2) : gcd(n2, n1);
 }
 
+void testRef1(vector<int> v) {
+    v[0] = 1;
+}
+
+void testRef2(int arr[]) {
+    arr[0] = 1;
+}
+
 int main() {
+    vector<int> v1(5, 0);
+    int generalArray[5] = { 0 };
+    cout << endl;
+    testRef1(v1); // 원본 배열을 복사
+    testRef2(generalArray); // 원본 배열을 참조
+
+    for (int i = 0;i < v1.size();i++) {
+        cout << v1[i] << " " << '\n';
+    }
+
+    for (int i = 0; i < 5; i++) {
+        cout << generalArray[i] << " ";
+    }
 
 
 

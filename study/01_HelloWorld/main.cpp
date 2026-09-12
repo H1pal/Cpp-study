@@ -30,6 +30,16 @@ int func3() {
     return 0;
 }
 
+namespace {
+    int OnlyInThisFile() {
+        std::cout<<"OnlyInThisFile"<< std::endl;
+        return 0;
+    }
+
+    int only_in_this_file = 0;
+
+}
+
 using namespace h2;
 
 int main() {
@@ -42,5 +52,11 @@ int main() {
     // 두 헤더 파일 모두 using namespace할 시에 실행할 함수에 대하여 `모호한 호출(ambiguous call) 에러` 발생
     // => 서로 매개변수의 타입과 개수를 다르게 두면 예방 가능
 
+    // std::cout ostream 클래스의 객페 표준 출력
+    // std::endl:
     std::cout << "Hello main World!!" << std::endl;
+
+
+    OnlyInThisFile();
+    return 0;
 }
