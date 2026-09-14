@@ -1,8 +1,0 @@
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/CMakeFiles/c__test.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/CMakeFiles/study_vector.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/CMakeFiles/study01.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/solve/CMakeFiles/judge.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/solve/CMakeFiles/edit_cache.dir
-/Users/gmlvkf282/Desktop/study/C++/cmake-build-debug/solve/CMakeFiles/rebuild_cache.dir

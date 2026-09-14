@@ -66,9 +66,9 @@ int main() {
     // front() / back(): 첫/마지막 원소에 접근
 
     auto startIter = fibo.begin(); // begin() : 해당 vector에서 첫 원소를 가리키는 iterable 반환
-    auto endIter = fibo.end(); // end() : 해당 vector에서 마지막의 다음 원소를 가리키는 iterable 반환
+    const auto endIter = fibo.end(); // end() : 해당 vector에서 마지막의 다음 원소를 가리키는 iterable 반환
     /* 실제 활용 */
-    for (auto &i = startIter; i != fibo.end(); ++i) {
+    for (auto &i = startIter; i != endIter; ++i) {
         cout << *i << " ";
     }
     cout << endl;
@@ -80,11 +80,15 @@ int main() {
         cout << "v의 길이는 1이상" << '\n';
     }
 
-    const MyRange iter(1, 5); // iterator 만들어서 begin(),
+    const MyRange iter(1, 5); // iterator 만들어서 begin(), end(), 이 외의 operator 연산자 구현해보기
 
-    for (int i : iter) {
+    for (const int i : iter) {
         cout << i << " ";
     }
+    cout << endl;
+
+    vector<int> v5(v4.begin(), v4.end());
+    cout << v5.front() << " " << v5.back() << "\n";
 
     return 0;
 }

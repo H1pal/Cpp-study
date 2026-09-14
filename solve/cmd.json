@@ -1,0 +1,43 @@
+{
+  "$schema": "cmd-v1",
+  "description": "Command list for auto-organizing solved problems from judge.cpp.",
+  "note": "Commands use ';command @file-or-folder' format. The agent looks up the command in cmd.json and executes it.",
+  "commands": [
+    {
+      "id": "sync",
+      "trigger": ";sync",
+      "description": "Regenerates/fixes each problem folder's README.md from solved judge.cpp problems, matching ProblemTemplate.md.",
+      "scope": "solve/",
+      "modifier": "Fixes md files in mentioned folder/file to match ProblemTemplate. If none mentioned, targets all problems under solve/.",
+      "agent": "general-purpose",
+      "output": "Updates <ProblemName>.README.md in each problem folder."
+    },
+    {
+      "id": "new",
+      "trigger": ";new",
+      "description": "Scaffolds a new problem: folder, h/cpp files, README template, and test files.",
+      "scope": "solutions/<site>/<level>/",
+      "modifier": "Input format: ;new @<site>/<level>/<ProblemName>. Example: ;new @programmers/lv0/FindingMode",
+      "agent": "general-purpose",
+      "output": "Creates <ProblemName>.h, <ProblemName>.cpp, <ProblemName>.README.md, tests/<site>/<level>/test_<problem>.cpp."
+    },
+    {
+      "id": "review",
+      "trigger": ";review",
+      "description": "Reviews code in a problem folder and improves solution idea/complexity/code sections to match ProblemTemplate.",
+      "scope": "solutions/<site>/<level>/",
+      "modifier": "Reviews the file or folder mentioned by the user.",
+      "agent": "code-review",
+      "output": "Updates the solution idea, complexity, and code blocks in README.md."
+    },
+    {
+      "id": "list",
+      "trigger": ";list",
+      "description": "Lists all solved problems under solve/ in a table format.",
+      "scope": "solve/",
+      "modifier": "Whole list, or filter by site with ;list @<site>.",
+      "agent": "claude",
+      "output": "Table: ProblemName | site | difficulty | problem number | status."
+    }
+  ]
+}
