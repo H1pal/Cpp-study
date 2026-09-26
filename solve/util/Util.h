@@ -12,6 +12,7 @@ namespace util {
     int lcm(int n1, int n2);
     std::vector<int> make_irreducible(const std::vector<int> &arr);
     void doubleArray(std::vector<int> &arr);
+    int combination(int n, int r);
 }
 
 #endif // SOLVE_UTIL_H

@@ -19,7 +19,7 @@
       "scope": "solutions/<site>/<level>/",
       "modifier": "Input format: ;new @<site>/<level>/<ProblemName>. Example: ;new @programmers/lv0/FindingMode",
       "agent": "general-purpose",
-      "output": "Creates <ProblemName>.h, <ProblemName>.cpp, <ProblemName>.README.md, tests/<site>/<level>/test_<problem>.cpp."
+      "output": "Creates <ProblemName>.h, <ProblemName>.cpp, <ProblemName>.README.md"
     },
     {
       "id": "review",

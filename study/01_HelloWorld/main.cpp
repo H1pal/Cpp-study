@@ -43,6 +43,9 @@ namespace {
 using namespace h2;
 
 int main() {
+    /*
+    01-2. 프로그램 분석하기
+    */
     func1();
     func2();
     func3();
@@ -59,5 +62,43 @@ int main() {
     std::cout << "hee seong" << std::endl;
 
     OnlyInThisFile();
+
+
+    /*
+    01-3. C와의 공통점
+    */
+
+    // if - else, while, for, switch 등의 존재
+    // C 코드가 C++ 코드에 포함되는 것은 아님
+    // => C 컴파일러로 컴파일 되지만 C++ 에서는 되지 않는 요소들이 존재
+
+    // 변수의 정의
+    int i;
+    char c;
+    double d;
+    float f;
+    // 컴파일러에 따라서 한글 변수명은 사용 가능하지만 권장 X
+    // 변수명 맨 앞에 대문자 X
+
+    // 포인터: C와 돌이
+    int arr[10];
+    int *parr = arr;
+
+    int a;
+    int *pi = &a;
+
+    // 반복문
+    for (int i = 0;i < 10;i++) {
+        std::cout<<i<<" ";
+    }
+    int cnt = 0;
+    while (cnt <= 10) {
+        std::cout<<cnt++<<std::endl;
+    }
+
+    // 입력
+    // C: scanf로 변수앞에 `&`을 붙임 / 받는 데이터형을 정해야 하며, 데이터형에 따라서 인자를 다르게 주어서 입력 받아야 함
+    // C++: `cin >> {변수명}` 형태로 간단 / 데이터형에 관계없이 입력 받을 수 있음
+
     return 0;
 }

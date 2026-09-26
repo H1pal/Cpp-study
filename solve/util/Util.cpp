@@ -45,4 +45,11 @@ namespace util {
             i *= 2;
         }
     }
+
+    int combination(const int n, const int r) {
+        if (n == 1) return 1;
+        if (r == 0) return 1;
+        if (r >= n) return 1;
+        return combination(n-1, r) + combination(n-1, r-1);
+    }
 }
