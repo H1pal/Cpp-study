@@ -28,12 +28,12 @@ solve/
 
 ## 파일명 규칙
 
-| 요소 | 규칙 | 예시 |
-|---|---|---|
-| 문제 폴더 | `<사이트>/<난이도>/<ProblemName>` | `solutions/programmers/lv0/` |
-| 소스 파일 | `<ProblemName>.{h,cpp}` | `FindingMode.h`, `FindingMode.cpp` |
-| 풀이 노트 | `<ProblemName>.README.md` | `FindingMode.README.md` |
-| 양식 파일 | `ProblemTemplate.md` | 각 난이도 폴더 내에 하나 |
+| 요소      | 규칙                              | 예시                               |
+|-----------|-----------------------------------|------------------------------------|
+| 문제 폴더 | `<사이트>/<난이도>/<ProblemName>` | `solutions/programmers/lv0/`       |
+| 소스 파일 | `<ProblemName>.{h,cpp}`           | `FindingMode.h`, `FindingMode.cpp` |
+| 풀이 노트 | `<ProblemName>.README.md`         | `FindingMode.README.md`            |
+| 양식 파일 | `ProblemTemplate.md`              | 각 난이도 폴더 내에 하나           |
 
 > **주의**:  모든 풀이 노트는 `.README.md` 접미사를 사용합니다.
 
@@ -52,16 +52,16 @@ solve/
 
 ### 양식에 포함되는 항목
 
-| 항목 | 설명 | 필수 |
-|---|---|---|
-| **문제명** | 파일명과 동일한 제목 (H1) | ✓ |
-| **문제 번호** | Programmers/Baekjoon 문제 고유 번호 | ✓ |
-| **사이트** | 문제 링크 (Programmers, Baekjoon 등) | ✓ |
-| **난이도 / 폴더** | 고정 값 | ✓ |
-| **문제** | 문제 원문 + 제한 사항 + 입출력 예 | ✓ |
-| **풀이 아이디어** | 단계별 핵심 로직 (번호 매김 권장) | ✓ |
-| **복잡도** | 시간·공간 복잡도 | ✓ |
-| **노트** | 사용자 입력 칸 | - |
+| 항목              | 설명                                 | 필수 |
+|-------------------|--------------------------------------|------|
+| **문제명**        | 파일명과 동일한 제목 (H1)            | ✓   |
+| **문제 번호**     | Programmers/Baekjoon 문제 고유 번호  | ✓   |
+| **사이트**        | 문제 링크 (Programmers, Baekjoon 등) | ✓   |
+| **난이도 / 폴더** | 고정 값                              | ✓   |
+| **문제**          | 문제 원문 + 제한 사항 + 입출력 예    | ✓   |
+| **풀이 아이디어** | 단계별 핵심 로직 (번호 매김 권장)    | ✓   |
+| **복잡도**        | 시간·공간 복잡도                     | ✓   |
+| **노트**          | 사용자 입력 칸                       | -    |
 
 
 ### 빠른 시작
@@ -98,9 +98,9 @@ cmake --build . --target judge
 `cmd.json`에 정의된 명령어를 사용해 풀이 결과를 자동 정리할 수 있습니다.
 사용 형식과 상세 규칙은 **`AGENTS.md`** 를 참고하세요.
 
-| 명령어 | 대상 예시 | 설명 |
-|---|---|---|
-| `;sync` | `;sync` 또는 `;sync @폴더명` | README.md를 ProblemTemplate에 맞게 자동 갱신 |
-| `;new` | `;new @programmers/lv0/FindingMode` | 새 문제 스캐폴드(폴더, 파일, README 양식, 테스트) 자동 생성 |
-| `;review` | `;review @폴더명` | 코드 검토 및 README 보완 |
-| `;list` | `;list` 또는 `;list @사이트` | 풀린 문제 목록 표 출력 |
+| 명령어    | 대상 예시                           | 설명                                                        |
+|-----------|-------------------------------------|-------------------------------------------------------------|
+| `;sync`   | `;sync` 또는 `;sync @폴더명`        | README.md를 ProblemTemplate에 맞게 자동 갱신                |
+| `;new`    | `;new @programmers/lv0/FindingMode` | 새 문제 스캐폴드(폴더, 파일, README 양식, 테스트) 자동 생성 |
+| `;review` | `;review @폴더명`                   | 코드 검토 및 README 보완                                    |
+| `;list`   | `;list` 또는 `;list @사이트`        | 풀린 문제 목록 표 출력                                      |
