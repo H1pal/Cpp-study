@@ -9,6 +9,7 @@
 namespace my {
     class Calculator {
     public:
-        int postfix(const std::string &s);
+        std::vector<std::string> postfix(const std::string& s);
+        int calculate(const std::string& s, const int& mode);
     };
 }
