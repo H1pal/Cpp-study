@@ -66,7 +66,7 @@ namespace my {
                     if (isdigit(static_cast<unsigned char>(ch))) {
                         string num;
                         int start = i;
-                        bool isZeroOfFirst = false;
+                        bool isZeroOfFirst = (ch != '0');
                         num += ch;
                         while (i+1 < len && isdigit(static_cast<unsigned char>(s[i+1]))) {
                             if (!isZeroOfFirst) ++start;

@@ -7,7 +7,7 @@
 
 int main() {
     const auto calculator = new my::Calculator();
-    const auto postfix_result = calculator->postfix("1*5-3");
+    const auto postfix_result = calculator->postfix("000*5-3");
     for (const auto& c: postfix_result) {
         std::cout << c << " ";
     }
